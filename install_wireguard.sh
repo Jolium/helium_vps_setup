@@ -36,11 +36,12 @@ echo "" >> ws_keys.txt
 
 echo = downloading conf file =
 cd /etc/wireguard/
+[ -e wg0.conf ] && rm -- wg0.conf
 wget https://raw.githubusercontent.com/Jolium/helium_vps_setup/main/wg0.conf
 
 echo = substituting values on wg0.conf file =
-sed -i "s/VALUE_1_GOES_HERE/$VALUE_1/g" wg0.conf
-sed -i "s/VALUE_4_GOES_HERE/$VALUE_4/g" wg0.conf
+sed -i "s/VALUE_#1_GOES_HERE/$VALUE_1/g" wg0.conf
+sed -i "s/VALUE_#4_GOES_HERE/$VALUE_4/g" wg0.conf
 
 echo = uncomment ipv4 forwarding =
 sed -i "s/#net.ipv4.ip_forward=1/net.ipv4.ip_forward=1/g"  /etc/sysctl.conf
