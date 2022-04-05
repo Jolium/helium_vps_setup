@@ -14,7 +14,7 @@ wg genkey | sudo tee /etc/wireguard/hotspot-privatekey | wg pubkey | sudo tee /e
 echo = saving keys to wg_keys.txt =
 cd
 touch wg_keys.txt
-truncate -s 0 ws_keys.txt
+truncate -s 0 wg_keys.txt
 
 VALUE_1=$(cat /etc/wireguard/privatekey)
 echo "value #1 (privatekey):" >> wg_keys.txt
