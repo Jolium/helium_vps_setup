@@ -12,11 +12,14 @@ wget https://raw.githubusercontent.com/Jolium/helium_vps_setup/main/install_wire
 ### 3. Make file executable
 chmod +x install_wireguard.sh
 
-### 4. Run file
+### 4. Run script
 ./install_wireguard.sh
 
-### 5. When it finishes to run, check new created file on your home directory with all keys values (you may copy it to your pc)
-cat ws_keys.txt
+### >> You can delete the script after running
+rm install_wireguard.sh
+
+### 5. When it finishes to run, check the new created file on your home directory with all keys values (you may copy it to your pc)
+cat wg_keys.txt
 
 ### >> You should get something like the following:
 value #1 (privatekey):
