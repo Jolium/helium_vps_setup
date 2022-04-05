@@ -11,15 +11,32 @@ chmod +x install_wireguard.sh
 ### 4. Run file
 ./install_wireguard.sh
 
-### 5. When it finishes to run, reboot your vps
+### 5. When it finishes to run, check new created file on your home directory with all keys values (you may copy it to your pc)
+cat ws_keys
+
+### 6. You should get something like the following:
+value #1 (privatekey):
+<br />GBTChvJb+RijdtAvLQCRUEWUGA50we4MhE2Vg5AJ3F0=
+
+value #2 (publickey):
+<br />PNG67Sj2gCDgA50H6Qj2gCaHMkSwSOeBaH9ma7pFxy9=
+
+value #3 (hotspot-privatekey):
+<br />YgA50ONssK+/SahlB1Jfqi2weRkz61MjGDwSOeBaH9m=
+
+value #4 (hotspot-publickey):
+<br />t2gA50gA50we4Mh7Sj2gCaHMkSQiZfhTaYl6GVsRbfP=
+
+
+### 7. Reboot your vps
 reboot
 
-### 6. After 30s log in to your VPS and check if everything is running correctly
+### 8. After 30s log in to your VPS and check if everything is running correctly
 wg
 
-### 7. You should get something like the following:
+### 9. You should get something like the following:
 interface: wg0
-<br />&nbsp;&nbsp;&nbsp;&nbsp;public key: sRbfPRWU+4t7gr1kxO9nMIawIt2weRkz61MjGg4Mh7S=
+<br />&nbsp;&nbsp;&nbsp;&nbsp;public key: PNG67Sj2gCDgA50H6Qj2gCaHMkSwSOeBaH9ma7pFxy9=
 <br />&nbsp;&nbsp;&nbsp;&nbsp;private key: (hidden)
 <br />&nbsp;&nbsp;&nbsp;&nbsp;listening port: 51820
   
