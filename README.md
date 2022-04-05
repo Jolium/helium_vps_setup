@@ -1,6 +1,10 @@
 # How to install WireGuard and enable port forwarding
 
-### 1. Log in to your VPS (with PuTTY or ssh)
+### Watch Justin Kace's video until 4:20: https://www.youtube.com/watch?v=GYf7xjxgyRo&t=1s&ab_channel=JustinKace
+### Now you can skip all step 8 on Justin Kace's video (8.a to 8.i) with this script
+<br />
+
+### 1. Log in to your VPS (with PuTTY or ssh) if you are not already logged in
 
 ### 2. Download install_wireguard.sh
 wget https://raw.githubusercontent.com/Jolium/helium_vps_setup/main/install_wireguard.sh
@@ -12,9 +16,9 @@ chmod +x install_wireguard.sh
 ./install_wireguard.sh
 
 ### 5. When it finishes to run, check new created file on your home directory with all keys values (you may copy it to your pc)
-cat ws_keys
+cat ws_keys.txt
 
-### 6. You should get something like the following:
+### >> You should get something like the following:
 value #1 (privatekey):
 <br />GBTChvJb+RijdtAvLQCRUEWUGA50we4MhE2Vg5AJ3F0=
 
@@ -28,13 +32,13 @@ value #4 (hotspot-publickey):
 <br />t2gA50gA50we4Mh7Sj2gCaHMkSQiZfhTaYl6GVsRbfP=
 
 
-### 7. Reboot your vps
+### 6. Reboot your vps
 reboot
 
-### 8. After 30s log in to your VPS and check if everything is running correctly
+### 7. After 30s log in to your VPS and check if everything is running correctly
 wg
 
-### 9. You should get something like the following:
+### >> You should get something like the following:
 interface: wg0
 <br />&nbsp;&nbsp;&nbsp;&nbsp;public key: PNG67Sj2gCDgA50H6Qj2gCaHMkSwSOeBaH9ma7pFxy9=
 <br />&nbsp;&nbsp;&nbsp;&nbsp;private key: (hidden)
