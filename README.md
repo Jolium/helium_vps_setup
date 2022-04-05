@@ -18,7 +18,7 @@ chmod +x install_wireguard.sh
 ### >> You can delete the script after running
 rm install_wireguard.sh
 
-### 5. When it finishes to run, check the new created file on your home directory with all keys values (you may copy it to your pc)
+### 5. When it finishes to run, check the newly created file in your home directory with all key values (you may copy it to your pc)
 cat wg_keys.txt
 
 ### >> You should get something like the following:
