@@ -13,25 +13,26 @@ wg genkey | sudo tee /etc/wireguard/hotspot-privatekey | wg pubkey | sudo tee /e
 
 echo = saving keys to ws_keys =
 cd
-touch ws_keys
+touch ws_keys.txt
+truncate -s 0 ws_keys.txt
 
 VALUE_1=$(cat /etc/wireguard/privatekey)
-echo "value #1:" >> ws_keys
-echo "$VALUE_1" >> ws_keys
-echo "" >> ws_keys
+echo "value #1 (privatekey):" >> ws_keys.txt
+echo "$VALUE_1" >> ws_keys.txt
+echo "" >> ws_keys.txt
 
-echo "value #2:" >> ws_keys
-cat /etc/wireguard/publickey >> ws_keys
-echo "" >> ws_keys
+echo "value #2 (publickey):" >> ws_keys.txt
+cat /etc/wireguard/publickey >> ws_keys.txt
+echo "" >> ws_keys.txt
 
-echo "value #3:" >> ws_keys
-cat /etc/wireguard/hotspot-privatekey >> ws_keys
-echo "" >> ws_keys
+echo "value #3 (hotspot-privatekey):" >> ws_keys.txt
+cat /etc/wireguard/hotspot-privatekey >> ws_keys.txt
+echo "" >> ws_keys.txt
 
 VALUE_4=$(cat /etc/wireguard/hotspot-publickey)
-echo "value #4:" >> ws_keys
-echo "$VALUE_4" >> ws_keys
-echo "" >> ws_keys
+echo "value #4 (hotspot-publickey):" >> ws_keys.txt
+echo "$VALUE_4" >> ws_keys.txt
+echo "" >> ws_keys.txt
 
 echo = downloading conf file =
 cd /etc/wireguard/
